@@ -4,10 +4,10 @@ const changeMessage = () => {
 
     if(localStorage.getItem("visited")){ 
        return message.innerText= "Sé que esto no es la gran cosa, \n pero esto nunca se va a perder o borrar \n siempre va a estar siempre que lo quieras ver \n Me gustas, me encantas y lo más importante: \n te quiero muchísimo ❤️"
-
-
+       
     }
     message.innerText= "Lee la hoja❤️"
+    document.getElementById("showMessage").removeEventListener("click", changeMessage);
     localStorage.setItem("visited", true);
 }
 
